@@ -1,6 +1,12 @@
 (ns taneous.admin
   (:require [taneous.util :as util]))
 
+(defn get-schema
+  [app]
+  (util/get app
+            "/admin/schema"
+            {:app-id (:app-id app)}))
+
 (defn query
   [app q]
   (util/post app
