@@ -99,10 +99,10 @@ Example of fetching associations:
 (admin/query
  app
  {:goals {:todos {}}})
-;; =>  {:goals [{:id "d7b2791c-e851-4ae7-95ec-36a064d80c87",
+;; =>  {:goals [{:id "00000000-0000-0000-0000-000000000000",
 ;;               :title "Get fit",
 ;;               :todos [{:title "Go on a run",
-;;                        :id "c2c6bb3f-7db9-466b-ade0-ce25fd205dbc"}]}]}
+;;                        :id "00000000-0000-0000-0000-000000000000"}]}]}
 ```
 
 There is support for impersonation (`as-guest`, `as-email`, and `as-token`)
