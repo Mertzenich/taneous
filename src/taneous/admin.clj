@@ -8,8 +8,8 @@
         {:query q}))
 
 (defn- tx->transact-repr
-  [tx]
-  [(:tx tx) (:ns tx) (:id tx) (:q tx)])
+  [{:keys [tx ns id q]}]
+  [tx ns id q])
 
 (defn transact
   [app & txs]
