@@ -1,0 +1,13 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.12.0"}
+        clj-http/clj-http {:mvn/version "3.13.0"}
+        cheshire/cheshire {:mvn/version "5.13.0"}
+        org.clojure/core.async {:mvn/version "1.6.673"}}
+ :aliases
+ {:test
+  {:extra-paths ["test"]
+   :extra-deps {lambdaisland/kaocha {:mvn/version "1.91.1392"}}}
+  :build {:deps {io.github.clojure/tools.build
+                 {:mvn/version "0.10.5"}
+                 slipset/deps-deploy {:mvn/version "0.2.2"}}
+          :ns-default build}}}
