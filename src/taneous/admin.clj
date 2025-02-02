@@ -20,8 +20,14 @@
 (defn transact
   [app & txs]
   (util/post app
-        "/admin/transact"
-        {:steps (map tx->transact-repr txs)}))
+             "/admin/transact"
+             {:steps (map tx->transact-repr txs)}))
+
+(defn transact-perms-check
+  [app & txs]
+  (util/post app
+             "/admin/transact_perms_check"
+             {:steps (map tx->transact-repr txs)}))
 
 (defn as-guest
   [app]
