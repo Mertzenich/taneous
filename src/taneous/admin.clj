@@ -10,8 +10,15 @@
 (defn query
   [app q]
   (util/post app
-        "/admin/query"
-        {:query q}))
+             "/admin/query"
+             {:query q}))
+
+(defn query-perms-check
+  [app q]
+  (util/post app
+             "/admin/query_perms_check"
+             {:app-id (:app-id app)
+              :query q}))
 
 (defn- tx->transact-repr
   [{:keys [tx ns id q]}]
