@@ -1,4 +1,5 @@
 (ns taneous.util
+  (:refer-clojure :exclude [get update])
   (:require [clj-http.client :as http]))
 
 (defn post
