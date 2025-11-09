@@ -1,0 +1,19 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["dev" "src" "test"]
+
+ :dependencies
+ [[cider/cider-nrepl "0.57.0"]
+  [refactor-nrepl/refactor-nrepl "3.11.0"]]
+
+ :nrepl {:port 9000
+         :middleware []}
+
+ :builds
+ {:app {:target :node-script ; Might want to use `:node-library` target
+        :output-to "target/core.js"
+        :main taneous.core/-main}
+  :test {:target :node-test
+         :output-to "target/node-tests.js"
+         :ns-regexp "-test$"
+         :autorun true}}}
