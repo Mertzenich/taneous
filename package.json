@@ -4,5 +4,8 @@
   "private": true,
   "devDependencies": {
     "shadow-cljs": "3.2.1"
+  },
+  "dependencies": {
+    "@instantdb/admin": "^0.22.49"
   }
 }
